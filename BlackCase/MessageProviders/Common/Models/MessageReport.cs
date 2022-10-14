@@ -5,11 +5,11 @@
         /// <summary>
         ///     Status of the sent message.
         /// </summary>
-        public string Result { get; set; }
+        public string? Result { get; set; }
 
         /// <summary>
         ///     Sent message error report.
         /// </summary>
-        public string FailedMessage { get; set; }
+        public string? FailedMessage { get; set; }
     }
 }

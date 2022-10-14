@@ -19,6 +19,12 @@ namespace MessagesSender.Infrastructure.Database.Extensions
         {
             var serviceScope = serviceProvider.CreateScope();
             var context = serviceScope.ServiceProvider.GetService<MessagesSenderContext>();
+
+            if (context == null)
+            {
+                throw new NullReferenceException(nameof(context));
+            }
+            
             await context.Database.MigrateAsync(CancellationToken.None);
         }
     }

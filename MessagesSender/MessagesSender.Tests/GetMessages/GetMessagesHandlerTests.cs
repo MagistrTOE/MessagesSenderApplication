@@ -46,10 +46,16 @@ namespace MessagesSender.Tests.GetMessages
             // Act
             var result = await _handler.Handle(request, CancellationToken.None);
 
-            //
+            // Assert
             Assert.IsType<List<MessageResponse>>(result);
 
             var resultItem = result.First();
+            
+            if (resultItem.Recipients == null)
+            {
+                throw new NullReferenceException(nameof(resultItem.Recipients));
+            }
+
             Assert.Equal("TestSubject", resultItem.Subject);
             Assert.Equal("TestBody", resultItem.Body);
             Assert.Equal("TestRecipient", resultItem.Recipients.First());

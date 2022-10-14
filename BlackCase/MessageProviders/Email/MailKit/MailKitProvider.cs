@@ -28,6 +28,10 @@ namespace MessageProviders.Email.MailKit
 
             try
             {
+                if (emailMessage.EmailAddresses == null)
+                {
+                    throw new ArgumentNullException(nameof(emailMessage));
+                }
                 var mailTo = string.Join(',', emailMessage.EmailAddresses);
 
                 await _emailService.SendAsync(mailTo, emailMessage.Subject, emailMessage.Body);

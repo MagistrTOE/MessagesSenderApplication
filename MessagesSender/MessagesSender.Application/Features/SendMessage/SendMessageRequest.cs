@@ -12,17 +12,17 @@ namespace MessagesSender.Application.Features.SendMessage
         /// <summary>
         ///     Mapping message subject.
         /// </summary>
-        public string Subject { get; set; }
+        public string? Subject { get; set; }
 
         /// <summary>
         ///     Mapping message body.
         /// </summary>
-        public string Body { get; set; }
+        public string? Body { get; set; }
 
         /// <summary>
         ///     Mapping message recipients.
         /// </summary>
-        public string[] Recipients { get; set; }
+        public string[]? Recipients { get; set; }
     }
 
     public class SendMessageHandler : IRequestHandler<SendMessageRequest>

@@ -7,6 +7,6 @@ namespace MessageProviders.Email.Common.Models
         /// <summary>
         ///     Email addresses for sending message.
         /// </summary>
-        public string[] EmailAddresses { get; set; }
+        public string[]? EmailAddresses { get; set; }
     }
 }

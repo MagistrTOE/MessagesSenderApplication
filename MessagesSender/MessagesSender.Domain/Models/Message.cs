@@ -10,17 +10,17 @@
         /// <summary>
         ///     Message subject.
         /// </summary>
-        public string Subject { get; set; }
+        public string? Subject { get; set; }
 
         /// <summary>
         ///     Message body.
         /// </summary>
-        public string Body { get; set; }
+        public string? Body { get; set; }
 
         /// <summary>
         ///     Message recipients.
         /// </summary>
-        public string[] Recipients { get; set; }
+        public string[]? Recipients { get; set; }
 
         /// <summary>
         ///     Message created date.
@@ -30,11 +30,11 @@
         /// <summary>
         ///     Status of the sent message.
         /// </summary>
-        public string Result { get; set; }
+        public string? Result { get; set; }
 
         /// <summary>
         ///     Sent message error report.
         /// </summary>
-        public string FailedMessage { get; set; }
+        public string? FailedMessage { get; set; }
     }
 }
