@@ -36,11 +36,11 @@ namespace MessageProviders.Email.MailKit
 
                 await _emailService.SendAsync(mailTo, emailMessage.Subject, emailMessage.Body);
 
-                report.Result = "OK";
+                report.Result = StatusMessage.Ok.ToString();
             }
             catch (Exception ex)
             {
-                report.Result = "Failed";
+                report.Result = StatusMessage.Failed.ToString();
                 report.FailedMessage = ex.Message;
             }
             return report;
