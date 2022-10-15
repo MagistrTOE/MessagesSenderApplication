@@ -1,20 +1,20 @@
- Описание 
- --------
-- *Web Api приложение MessagesSenderApplication для отправки сообщений. Отправленные сообщения записываются в базу данных, также записываются отчеты об отправке сообщения*
-- *Приложение написано на платформе .NET Core 6 Web API*
-- *Используется провайдер MailKit*
-- *Для работы с приложением используется фрэймворк с набором инструментов Swagger*
-- *База данных: PostgreSQL*
+Project description
+--------
+- *Web Api application MessagesSenderApplication for sending messages. Sent messages are recorded in the database, reports on sending messages are also recorded*
+- *Application is written on the .NET Core 6 Web API platform*
+- *Used provider MailKit*
+- *To work with the application, a framework with a set of Swagger tools is used*
+- *Database: PostgreSQL*
 
-Конфигурация
+Configuration
 ------------
-- *Подключение к БД:*
+- *Database connection:*
   ```yaml
   "ConnectionStrings": {
     "MessagesSenderContext": "User ID=postgres;Password=password;Host=localhost;Port=5432;Database=MessagesSenderDb;"
   }
   ```
-- *Конфигурация Smtp клиента:*
+- *Smtp client configuration:*
   ```yaml
   "SmtpSettings": {
     "Host": " ",
@@ -25,11 +25,11 @@
     "Password": " "
   }
   ```
-- *Применять миграции вручную через командную строку не требуется, применение всех миграций и создание БД будет выполняться автоматически при запуске проекта, это сконфигурировано в Program.cs*
+- *It is not required to apply manual migrations through the command line, all migrations will be applied and the database will be created automatically when the project is started, this is configured in Program.cs*
 
-Запуск проекта:
+Launch project:
 ---------------
-1. Склонировать с репозитория **MessagesSenderApplication** все файлы 
-2. Установить нужную конфигурацию Smtp
-3. Запустить проект **MessagesSender.Web.Api**
-4. В браузере перейти по ссылке <https://localhost:7114/swagger>
+1. Clone all files from the **MessagesSenderApplication** repository 
+2. Set the desired Smtp configuration
+3. Run the project **MessagesSender.Web.Api**
+4. In a browser, go to the link <https://localhost:7114/swagger>
